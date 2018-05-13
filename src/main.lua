@@ -174,7 +174,7 @@ local function wifiSetup()
         debugPrint(0, "Wi-Fi: got IP " .. T.IP)
         mqttScheduleReconnect()
     end)
-    wifi.sta.config(ap_ssid, ap_pass)
+    wifi.sta.config {ssid=ap_ssid, pwd=ap_pass}
 end
 
 -- Main program entry point
